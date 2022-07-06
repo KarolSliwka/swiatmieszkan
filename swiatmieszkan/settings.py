@@ -11,14 +11,13 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-import dj_database_url
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-# Static Root added to collect all static files.
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -26,9 +25,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 SECRET_KEY = os.environ.get('DJANGO_SECRET', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMET' in os.environ
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+if 'MY_SITE' in os.environ:
+    ALLOWED_HOSTS = [os.environ.get('MY_SITE')]
+else:
+    ALLOWED_HOSTS = ['abovewave.herokuapp.com', 'localhost', '127.0.0.1']
+
 
 # Application definition
 
@@ -43,11 +46,14 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+
+    # My Apps
     'home',
 
     # Other
     'storages',
     'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +68,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'swiatmieszkan.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 TEMPLATES = [
     {
@@ -93,7 +101,6 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
-
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
@@ -106,7 +113,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
-LOGIN_URL = '/admin/login/'
+LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 WSGI_APPLICATION = 'swiatmieszkan.wsgi.application'
 
@@ -114,7 +121,7 @@ WSGI_APPLICATION = 'swiatmieszkan.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
+if 'DATABASE_UR' in os.environ:
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
@@ -128,7 +135,7 @@ else:
 
 
 # Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -147,7 +154,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # Internationalization
-# https://docs.djangoproject.com/en/3.2/topics/i18n/
+# https://docs.djangoproject.com/en/3.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -176,7 +183,7 @@ if 'BUCKET_S3' in os.environ:
         'CacheControl': 'max-age=94608000',
     }
     # Bucket S3 Congig
-    AWS_STORAGE_BUCKET_NAME = "xxxxx"
+    AWS_STORAGE_BUCKET_NAME = "abovewave"
     AWS_S3_REGION_NAME = "eu-west-2"
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
@@ -196,14 +203,12 @@ if 'BUCKET_S3' in os.environ:
 # Gmail sending real e-mail settings
 if 'EMAIL' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = "xxxx@xxx.com"
+    DEFAULT_FROM_EMAIL = "hello@abovewave.co.uk"
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_USE_TLS = True
-    EMAIL_PORT = 587
+    EMAIL_HOST = os.environ.get('EMAIL_HOST')
+    EMAIL_USE_TLS = os.environ.get('EMAIL_TLS')
+    EMAIL_PORT = os.environ.get('EMAIL_PORT')
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
