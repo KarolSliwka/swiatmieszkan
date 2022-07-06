@@ -1,0 +1,81 @@
+{% load static %}
+<!doctype html>
+<html lang="pl">
+
+<head>
+    {% block meta %}
+    <!-- meta information -->
+
+    {% endblock %}
+
+    <!-- Favicon -->
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
+    <!-- Bootstrap CSS -->
+
+    <!-- Fontawesome -->
+
+    <!-- Hover.css  -->
+
+
+    <!-- Main CSS Files -->
+
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    <title></title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+    </header>
+
+    <!-- Messages container -->
+    {% if messages %}
+    <div class="messages-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        <!-- Error Message -->
+        {% include 'includes/toasts/toast-error.html'%}
+        {% elif level == 30 %}
+        <!-- Warning Message -->
+        {% include 'includes/toasts/toast-warning.html'%}
+        {% elif level == 25 %}
+        <!-- Success Message -->
+        {% include 'includes/toasts/toast-success.html'%}
+        {% else %}
+        <!-- Info Message -->
+        {% include 'includes/toasts/toast-info.html'%}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block corejs %}
+
+    <!-- jQuery and JS bundle w/ Popper.js -->
+
+    <!-- JavaScript files -->
+
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+</body>
+
+</html>
