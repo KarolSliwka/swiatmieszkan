@@ -1,4 +1,9 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
-/* ------------------------------------------------------------ BASE STYLE ----- */
-@import "base/base.scss";
+/* coloristic */
+@import "./colors";
+@import "components/icons/icons";
+/* base style */
+@import "base/base";
+/* header - navigation */
+@import "components/header/navbar";
