@@ -41,8 +41,8 @@
 
 <body id="{{ request.resolver_match.url_name }}" class="d-flex flex-column h-100">
     <!-- Navigation -->
-    <header class="container-fluid">
-        <div class="container">
+    <header class="container-fluid p-0">
+        <div class="container p-0">
             <div class="d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
                 {% include 'layout/nav/nav-mob.html' %}
             </div>
@@ -87,7 +87,7 @@
         {% endblock %}
     </main>
 
-    <footer class="footer mt-auto py-3 bg-light">
+    <footer class="footer mt-auto py-3">
         <!-- Include Footer.html -->
         {% include 'layout/footer/footer.html' %}
     </footer>
