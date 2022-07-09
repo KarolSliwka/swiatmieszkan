@@ -2,6 +2,8 @@ html {
     height: 100%;
     width: 100%;
     background-color: $light-white;
+    color: $light-grey;
+    font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -12,15 +14,17 @@ li {
     transition: background-color 0.3s ease;
 }
 
-/*
-h1{}
-h2{}
-h3{}
-h4{}
-h5{}
-h6{}
-*/
+h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: $black;
+}
 
 main > .container {
     padding: 60px 15px 0;
+}
+
+.hr-line {
+    margin: 2px auto 2px auto;
+    width: 80%;
 }
