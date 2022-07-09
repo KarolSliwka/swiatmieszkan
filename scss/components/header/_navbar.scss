@@ -1,6 +1,6 @@
 header {
     width: 100%;
-    min-height: 70px;
+    height: 70px;
     background-color: $white;
     font-size: 0.85rem;
     display: flex;
@@ -9,6 +9,7 @@ header {
 
     nav {
         background-color: $white !important;
+        height: 66px;
 
         .logo {
             height: 40px;
@@ -18,89 +19,63 @@ header {
             height: 100%;
         }
     }
-
-    #hamburger-button,
-    #hamburger-button-medium {
-        width: 25px;
-        height: 20px;
-        position: relative;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-        -webkit-transition: 0.5s ease-in-out;
-        -moz-transition: 0.5s ease-in-out;
-        -o-transition: 0.5s ease-in-out;
-        transition: 0.5s ease-in-out;
-        cursor: pointer;
-    }
-
-    #hamburger-button span,
-    #hamburger-button-medium span {
-        display: block;
-        position: absolute;
-        height: 3px;
-        width: 100%;
-        background: #00d4f5;
-        border-radius: 9px;
-        opacity: 1;
-        left: 0;
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-        -webkit-transition: 0.25s ease-in-out;
-        -moz-transition: 0.25s ease-in-out;
-        -o-transition: 0.25s ease-in-out;
-        transition: 0.25s ease-in-out;
-    }
-
-    #hamburger-button span:nth-child(1),
-    #hamburger-button-medium span:nth-child(1) {
-        top: 0px;
-    }
-
-    #hamburger-button span:nth-child(2),
-    #hamburger-button span:nth-child(3),
-    #hamburger-button-medium span:nth-child(2),
-    #hamburger-button-medium span:nth-child(3) {
-        top: 7px;
-    }
-
-    #hamburger-button span:nth-child(4),
-    #hamburger-button-medium span:nth-child(4) {
-        top: 14px;
-    }
-
-    #hamburger-button.open span:nth-child(1),
-    #hamburger-button-medium.open span:nth-child(1) {
-        top: 18px;
-        width: 0%;
-        left: 50%;
-    }
-
-    #hamburger-button.open span:nth-child(2),
-    #hamburger-button-medium.open span:nth-child(2) {
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        -o-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-
-    #hamburger-button.open span:nth-child(3),
-    #hamburger-button-medium.open span:nth-child(3) {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
-
-    #hamburger-button.open span:nth-child(4),
-    #hamburger-button-medium.open span:nth-child(4) {
-        top: 18px;
-        width: 0%;
-        left: 50%;
-    }
 }
 
+.special-height {
+    height: 70px;
+}
+
+.info-link {
+    position: relative;
+
+    &:focus .sub-menu,
+    &t:focus-within .sub-menu,
+    &:hover .sub-menu {
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+        transform: translateY(-2px);
+    }
+
+    .sub-menu {
+        list-style: none;
+        visibility: hidden;
+        position: absolute;
+        width: 214px;
+        left: -16px;
+        opacity: 0;
+        background-color: $white;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 0 0 10px 15px;
+        z-index: -1;
+        -webkit-box-shadow: 0px 4px 10px -2px #eee;
+        -moz-box-shadow: 0px 4px 10px -2px #eee;
+        box-shadow: 0px 4px 10px -2px #eee;
+        transform: translateY(-2em);
+        -webkit-transition: all 0.15s ease-in;
+        -moz-transition: all 0.15s ease-in;
+        -o-transition: all 0.15s ease-in;
+        transition: all 0.15s ease-in;
+
+        /* Links */
+        li {
+            a {
+                text-decoration: none;
+                display: block;
+                padding: 0.5rem 1.25rem;
+                color: $light-grey;
+
+                &:hover {
+                    color: $flat-blue;
+                }
+            }
+        }
+
+        div > a:last-child {
+            padding-bottom: 1.25rem;
+        }
+    }
+}
+/* import navbar links style */
 @import "./navbar-links";
