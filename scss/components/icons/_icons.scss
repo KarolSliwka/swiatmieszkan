@@ -48,11 +48,16 @@
             top: 16px;
         }
     }
+
+    &:hover span {
+        background-color: $flat-blue;
+    }
 }
 
 #ham-btn.open,
 #ham-btn-med.open {
     span {
+        background-color: $flat-blue;
         &:nth-child(1) {
             top: -5px;
             height: 0;
