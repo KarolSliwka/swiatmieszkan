@@ -5,14 +5,17 @@ $(document).ready(function () {
    */
   $("#btn-ham-tab").click(function () {
     $(this).toggleClass("open");
+    $(this).parent().next("div").toggleClass("expand-menu");
   });
 
   $("#btn-ham-med").click(function () {
     $(this).toggleClass("open");
+    $(this).parent().next("ul").toggleClass("expand-menu");
   });
 
   $("#btn-ham-mob").click(function () {
     $(this).toggleClass("open");
+    $(this).parent().next("ul").toggleClass("expand-menu");
   });
 
   /**
