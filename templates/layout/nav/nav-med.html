@@ -1,4 +1,4 @@
-<nav class="navbar text-end">
+<nav class="navbar">
     <a class="navbar-brand" href="{% url 'home' %}">
         <img src="{{MEDIA_URL}}logo/swiatmieszkan.png" alt="" class="logo">
     </a>
@@ -8,17 +8,17 @@
                 <img src="{{MEDIA_URL}}icons/plus.png" alt="add-new-listing-icon" class="icon-plus">
                 </i>Dodaj Mieszkanie</a>
         </li>
-        <li class="nav-item me-4">
-            <a class="nav-link" href="#">Zaloguj<i class="far fa-user ms-2"></i>
-            </a>
-        </li>
-        <button id="btn-ham-tab" class="navbar-toggler my-auto">
+        <button id="btn-ham-med" class="navbar-toggler my-auto">
             <span></span>
             <span></span>
             <span></span>
         </button>
     </ul>
-    <div id="submenu-tab" class="submenu-tab">
+    <ul id="submenu-med" class="submenu-med">
+        <li class="nav-item nav-link justify-content-end">
+            <a class="nav-item" href="#">Zaloguj<i class="far fa-user ms-2"></i>
+            </a>
+        </li>
         <li class="nav-item nav-link justify-content-end">Informacje<i id="chevron"
                 class="far fa-chevron-down ms-2"></i>
         </li>
@@ -27,5 +27,5 @@
             <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">Najemca</a></li>
             <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">O Platformie</a></li>
         </ul>
-    </div>
+    </ul>
 </nav>
