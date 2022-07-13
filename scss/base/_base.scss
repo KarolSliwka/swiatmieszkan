@@ -2,6 +2,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    min-width: 320px !important;
     background-color: $light-white;
     color: $light-grey;
     font-family: "Montserrat", sans-serif;
@@ -32,4 +33,8 @@ main > .container {
 
 .hr-line {
     margin: 0 auto 8px auto;
+}
+
+.selected-menu {
+    color: $flat-blue !important;
 }
