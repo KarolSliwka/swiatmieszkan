@@ -1,12 +1,52 @@
 $(document).ready(function () {
-  $("#ham-btn-med").click(function () {
+  /**
+   * This fucntion will apply class for hamburger button in each menu
+   * when clicked on button
+   */
+  $("#btn-ham-tab").click(function () {
     $(this).toggleClass("open");
+  });
 
-    // chceck if sub-menu has class open then change display to block otherwise change it back to none
-    if ($("#ham-btn-med").hasClass("open")) {
-      $(".sub-menu-1").css("visibility", "visible");
-    } else {
-      $(".sub-menu-1").css("visibility", "hidden");
-    }
+  $("#btn-ham-med").click(function () {
+    $(this).toggleClass("open");
+  });
+
+  $("#btn-ham-mob").click(function () {
+    $(this).toggleClass("open");
+  });
+
+  /**
+   * This function will apply class to rotate little chevron
+   * when clicked on submenu link in doprdown menu
+   */
+  $("#submenu-tab").click(function () {
+    $(this).children("li").toggleClass("selected-menu");
+    $(this).children("li").children("i").toggleClass("rotate");
+    $(this)
+      .children("li")
+      .next("#expand-menu")
+      .children("li")
+      .toggleClass("d-none");
+    $(this).children("li").next("#expand-menu").toggleClass("expand");
+  });
+  $("#submenu-med").click(function () {
+    $(this).children("li").toggleClass("selected-menu");
+    $(this).children("li").children("i").toggleClass("rotate");
+    $(this)
+      .children("li")
+      .next("#expand-menu")
+      .children("li")
+      .toggleClass("d-none");
+    $(this).children("li").next("#expand-menu").toggleClass("expand");
+  });
+  $("#submenu-mob").click(function () {
+    $(this).children("li").toggleClass("selected-menu");
+    $(this).children("li").children("i").toggleClass("rotate");
+    $(this)
+      .children("li")
+      .next("#expand-menu")
+      .children("li")
+      .toggleClass("d-none");
+    $(this).children("li").next("#expand-menu").toggleClass("expand");
   });
 });
