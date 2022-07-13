@@ -81,6 +81,8 @@ header {
 
 .submenu {
     position: absolute;
+    transform: scaleY(1);
+    transform-origin: top;
     top: 66px;
     right: 0;
     list-style: none;
@@ -123,6 +125,10 @@ header {
             color: $white !important;
         }
     }
+
+    &.expand-menu {
+        transform: scaleY(0);
+    }
 }
 
 #chevron {
@@ -142,6 +148,7 @@ header {
 }
 
 #expand-menu {
+    position: relative;
     margin: 0;
     transform: scaleY(1);
     transform-origin: top;
