@@ -3,8 +3,9 @@
     margin-right: 5px;
 }
 
-#ham-btn,
-#ham-btn-med {
+#btn-ham-tab,
+#btn-ham-med,
+#btn-ham-mob {
     width: 25px;
     height: 21px;
     border: none;
@@ -54,8 +55,9 @@
     }
 }
 
-#ham-btn.open,
-#ham-btn-med.open {
+#btn-ham-tab.open,
+#btn-ham-med.open,
+#btn-ham-mob.open {
     span {
         background-color: $flat-blue;
         &:nth-child(1) {
