@@ -41,15 +41,18 @@
 
 <body id="{{ request.resolver_match.url_name }}" class="d-flex flex-column h-100">
     <!-- Navigation -->
-    <header class="container-fluid p-0">
-        <div class="container p-0">
-            <div class="d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
+    <header class="container-fluid">
+        <div class="container">
+            <div class="d-xs-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none">
                 {% include 'layout/nav/nav-mob.html' %}
             </div>
-            <div class="d-none d-sm-none d-md-block d-lg-none d-xl-none">
+            <div class="d-none d-xs-none d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none">
+                {% include 'layout/nav/nav-med.html' %}
+            </div>
+            <div class="d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none">
                 {% include 'layout/nav/nav-tab.html' %}
             </div>
-            <div class="d-none d-lg-block d-xl-block">
+            <div class="d-none d-lg-block d-xl-block d-xxl-block">
                 {% include 'layout/nav/nav.html' %}
             </div>
         </div>
@@ -95,8 +98,7 @@
     <!-- JavaScript -->
     {% block corejs %}
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"
-        integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- Bootsrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
