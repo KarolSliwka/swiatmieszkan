@@ -18,7 +18,7 @@ nav {
 }
 
 .special-height {
-    height: 70px;
+    height: 58px;
 }
 
 .info-link {
@@ -30,7 +30,7 @@ nav {
         visibility: visible;
         opacity: 1;
         z-index: 1;
-        transform: translateY(-4px);
+        transform: translateY(0);
     }
 
     .sub-menu {
@@ -46,10 +46,11 @@ nav {
         border-bottom-right-radius: 1rem;
         padding: 0 15px 10px 0;
         z-index: -1;
-        -webkit-box-shadow: 0px 4px 10px -2px #eee;
-        -moz-box-shadow: 0px 4px 10px -2px #eee;
-        box-shadow: 0px 4px 10px -2px #eee;
-        transform: translateY(-2em);
+        -webkit-box-shadow: 0px 4px 10px -5px #ccc;
+        -moz-box-shadow: 0px 4px 10px -5px #ccc;
+        box-shadow: 0px 4px 10px -5px #ccc;
+        transform: scaleY(1);
+        transform-origin: top;
         -webkit-transition: all 0.15s ease-in-out;
         -moz-transition: all 0.15s ease-in-out;
         -o-transition: all 0.15s ease-in-out;
@@ -86,9 +87,9 @@ nav {
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     padding: 0.5rem 1.25rem;
-    -webkit-box-shadow: 0px 4px 10px -2px #eee;
-    -moz-box-shadow: 0px 4px 10px -2px #eee;
-    box-shadow: 0px 4px 10px -2px #eee;
+    -webkit-box-shadow: 0px 4px 10px -5px #ccc;
+    -moz-box-shadow: 0px 4px 10px -5px #ccc;
+    box-shadow: 0px 4px 10px -5px #ccc;
     -webkit-transition: all 0.25s ease;
     -moz-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
