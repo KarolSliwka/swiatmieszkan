@@ -1,24 +1,26 @@
-<nav class="navbar navbar-expand-lg py-0">
-    <a class="navbar-brand p-0" href="{% url 'home' %}">
-        <img src="{{MEDIA_URL}}logo/swiatmieszkan.png" alt="" class="logo">
-    </a>
-    <ul class="nav navbar-nav ms-auto">
-        <li class="nav-item add-new-listing my-auto me-3">
-            <a class="nav-link mx-2" href="#">
-                <img src="{{MEDIA_URL}}icons/plus.png" alt="add-new-listing-icon" class="icon-plus">
-                </i>Dodaj Mieszkanie</a>
-        </li>
-        <li class="nav-item info-link special-height">
-            <a class="nav-link" href="#"></i>Informacje<i class="far fa-chevron-down ms-2"></i></a>
-            <ul class="sub-menu">
-                <li class="nav-item"><a class="nav-link" href="#">Wynajmujący</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Najemca</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">O Platformie</a></li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link mx-2" href="#">Zaloguj<i class="far fa-user ms-2"></i>
-            </a>
-        </li>
-    </ul>
+<nav class="navbar navbar-expand-md fixed-top py-0">
+    <div class="container p-0">
+        <a class="navbar-brand p-0" href="{% url 'home' %}">
+            <img src="{{MEDIA_URL}}logo/swiatmieszkan.png" alt="" class="logo">
+        </a>
+        <ul class="nav navbar-nav ms-auto">
+            <li class="nav-item add-new-listing my-auto me-3">
+                <a class="nav-link mx-2" href="#">
+                    <img src="{{MEDIA_URL}}icons/plus.png" alt="add-new-listing-icon" class="icon-plus">
+                    </i>Dodaj Mieszkanie</a>
+            </li>
+            <li class="nav-item info-link special-height">
+                <a class="nav-link" href="#"></i>Informacje<i class="far fa-chevron-down ms-2"></i></a>
+                <ul class="sub-menu">
+                    <li class="nav-item"><a class="nav-link" href="#">Wynajmujący</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Najemca</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">O Platformie</a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mx-2" href="#">Zaloguj<i class="far fa-user ms-2"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
 </nav>
