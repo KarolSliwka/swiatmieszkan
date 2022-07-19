@@ -1,23 +1,19 @@
-header {
+nav {
     width: 100%;
-    height: 70px;
     background-color: $white;
     font-size: 0.85rem;
     display: flex;
     align-items: center;
     border-bottom: 4px solid $flat-blue;
+    background-color: $white !important;
+    height: 66px;
 
-    nav {
-        background-color: $white !important;
-        height: 66px;
+    .logo {
+        height: 40px;
+    }
 
-        .logo {
-            height: 40px;
-        }
-
-        .nav-link {
-            height: 100%;
-        }
+    .nav-link {
+        height: 100%;
     }
 }
 
@@ -34,7 +30,7 @@ header {
         visibility: visible;
         opacity: 1;
         z-index: 1;
-        transform: translateY(-2px);
+        transform: translateY(-4px);
     }
 
     .sub-menu {
@@ -80,11 +76,9 @@ header {
 }
 
 .submenu {
-    position: absolute;
+    position: relative;
     transform: scaleY(1);
     transform-origin: top;
-    top: 66px;
-    right: 0;
     list-style: none;
     width: 240px;
     background-color: $white;
@@ -160,6 +154,10 @@ header {
     &.expand {
         transform: scaleY(0);
     }
+}
+
+#submenu-mob {
+    top: 60px !important;
 }
 
 /* import navbar links style */
