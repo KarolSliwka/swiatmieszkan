@@ -8,23 +8,18 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Montserrat", sans-serif;
-}
-
+/* main headers style */
 h5 {
     font-size: 0.85rem;
     font-weight: 400;
     color: $black;
 }
 
-li {
-    transition: background-color 0.3s ease;
+/* main paragraphs style */
+p {
+    font-family: "Lato", sans-serif;
+    font-size: 0.85rem;
+    color: $black;
 }
 
 main > .container {
