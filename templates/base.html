@@ -41,20 +41,18 @@
 
 <body id="{{ request.resolver_match.url_name }}" class="d-flex flex-column h-100">
     <!-- Navigation -->
-    <header class="container-fluid">
-        <div class="container">
-            <div class="d-xs-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none">
-                {% include 'layout/nav/nav-mob.html' %}
-            </div>
-            <div class="d-none d-xs-none d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none">
-                {% include 'layout/nav/nav-med.html' %}
-            </div>
-            <div class="d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none">
-                {% include 'layout/nav/nav-tab.html' %}
-            </div>
-            <div class="d-none d-lg-block d-xl-block d-xxl-block">
-                {% include 'layout/nav/nav.html' %}
-            </div>
+    <header>
+        <div class="d-xs-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none">
+            {% include 'layout/nav/nav-mob.html' %}
+        </div>
+        <div class="d-none d-xs-none d-sm-block d-md-none d-lg-none d-xl-none d-xxl-none">
+            {% include 'layout/nav/nav-med.html' %}
+        </div>
+        <div class="d-none d-sm-none d-md-block d-lg-none d-xl-none d-xxl-none">
+            {% include 'layout/nav/nav-tab.html' %}
+        </div>
+        <div class="d-none d-lg-block d-xl-block d-xxl-block">
+            {% include 'layout/nav/nav.html' %}
         </div>
     </header>
 
@@ -86,8 +84,10 @@
 
     <!-- Block Content -->
     <main class="flex-shrink-0">
-        {% block content %}
-        {% endblock %}
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
     </main>
 
     <footer class="footer mt-auto py-3">
