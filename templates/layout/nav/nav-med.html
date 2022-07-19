@@ -1,31 +1,33 @@
-<nav class="navbar">
-    <a class="navbar-brand" href="{% url 'home' %}">
-        <img src="{{MEDIA_URL}}logo/swiatmieszkan.png" alt="" class="logo">
-    </a>
-    <ul class="nav navbar-nav flex-row">
-        <li class="nav-item add-new-listing my-auto me-4">
-            <a class="nav-link mx-3" href="#">
-                <img src="{{MEDIA_URL}}icons/plus.png" alt="add-new-listing-icon" class="icon-plus">
-                </i>Dodaj Mieszkanie</a>
-        </li>
-        <button id="btn-ham-med" class="navbar-toggler my-auto">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </ul>
-    <ul id="submenu-med" class="submenu expand-menu">
-        <li class="nav-item nav-link justify-content-end">
-            <a class="nav-item" href="#">Zaloguj<i class="far fa-user ms-2"></i>
-            </a>
-        </li>
-        <li class="nav-item nav-link justify-content-end">Informacje<i id="chevron"
-                class="far fa-chevron-down ms-2"></i>
-        </li>
-        <ul id="expand-menu" class="expand">
-            <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">Wynajmujący</a></li>
-            <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">Najemca</a></li>
-            <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">O Platformie</a></li>
+<nav class="navbar navbar-expand-md fixed-top px-0">
+    <div class="container px-0 justify-content-end">
+        <a class="navbar-brand me-auto" href="{% url 'home' %}">
+            <img src="{{MEDIA_URL}}logo/swiatmieszkan.png" alt="" class="logo">
+        </a>
+        <ul class="nav navbar-nav flex-row">
+            <li class="nav-item add-new-listing my-auto me-4">
+                <a class="nav-link mx-3" href="#">
+                    <img src="{{MEDIA_URL}}icons/plus.png" alt="add-new-listing-icon" class="icon-plus">
+                    </i>Dodaj Mieszkanie</a>
+            </li>
+            <button id="btn-ham-med" class="navbar-toggler my-auto">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </ul>
-    </ul>
+        <ul id="submenu-med" class="submenu expand-menu mb-0">
+            <li class="nav-item nav-link justify-content-end">
+                <a class="nav-item" href="#">Zaloguj<i class="far fa-user ms-2"></i>
+                </a>
+            </li>
+            <li class="nav-item nav-link justify-content-end">Informacje<i id="chevron"
+                    class="far fa-chevron-down ms-2"></i>
+            </li>
+            <ul id="expand-menu" class="expand">
+                <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">Wynajmujący</a></li>
+                <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">Najemca</a></li>
+                <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">O Platformie</a></li>
+            </ul>
+        </ul>
+    </div>
 </nav>

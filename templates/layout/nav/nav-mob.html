@@ -1,15 +1,15 @@
-<nav class="navbar">
-    <a class="navbar-brand" href="{% url 'home' %}">
+<nav class="navbar fixed-top justify-content-end px-3">
+    <a class="navbar-brand me-auto" href="{% url 'home' %}">
         <img src="{{MEDIA_URL}}logo/swiatmieszkan.png" alt="" class="logo">
     </a>
-    <ul class="nav navbar-nav flex-row">
-        <button id="btn-ham-mob" class="navbar-toggler my-auto">
+    <ul class="nav navbar-nav flex-row pe-2">
+        <button id="btn-ham-mob" class="navbar-toggler">
             <span></span>
             <span></span>
             <span></span>
         </button>
     </ul>
-    <ul id="submenu-mob" class="submenu expand-menu">
+    <ul id="submenu-mob" class="submenu position-absolute expand-menu mb-0">
         <li class="nav-item add-new-listing">
             <a class="nav-link mx-auto" href="#">
                 <img src="{{MEDIA_URL}}icons/plus.png" alt="add-new-listing-icon" class="icon-plus">
