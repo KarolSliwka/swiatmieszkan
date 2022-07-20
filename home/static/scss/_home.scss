@@ -1,0 +1,21 @@
+#home {
+    main {
+        section {
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+    }
+
+    .sec-search {
+    }
+
+    .sec-counter {
+        background-color: $white;
+
+        i {
+            color: $main;
+        }
+        .counters {
+        }
+    }
+}
