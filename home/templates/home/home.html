@@ -1,10 +1,64 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block extra_title %} - Znajdź tanie mieszkanie!{% endblock %}
+{% block extra_title %} - Wynajmij tak jak chcesz!{% endblock %}
 
 {% block content %}
+<!-- Hidden title -->
+<h1>Home page</h1>
+<!-- Search section -->
+<section class="sec-search">
+    <div class="container">
+        <h2 class=""></h2>
+        <div class="jumbotron">
+            <!-- Want to know more scroll button -->
+            <a class="btn btn-primary btn-lg" href="#" role="button">Dowiedz się więcej!</a>
+        </div>
+    </div>
+</section>
+<!-- Counter section -->
+<section class="sec-counter">
+    <!-- Number of listed/rented flats, tenats and landlords -->
+    <div class="container">
+        <h2 class="">Dziękujemy, że z nami jesteście! <i class="fas fa-heart"></i></h2>
+        <p>Zaufało nam już <span id="tenants-registered">23</span> wynajmujących, oraz
+            <span id="landlords-registered">10</span> najemców!
+        </p>
+    </div>
+</section>
+<!-- Latest listed flats -->
+<section class="sec-last-listed">
+    <div class="container">
 
-<h1 class="d-none">Home page</h1>
+    </div>
+</section>
+<!-- Adviertisment section -->
+<section class="adverts">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl 6">
+                <a id="advert-1" href="http://" class="advert-link" rel="noreferer,noopener,nofollow" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl 6">
+                <a id="advert-2" href="http://" class="advert-link" rel="noreferer,noopener,nofollow" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Landlord information -->
+<section class="sec-landlords">
+    <div class="container">
 
+    </div>
+</section>
+<!-- Tenant information -->
+<section class="sec-tenats">
+    <div class="container">
+
+    </div>
+</section>
 {% endblock %}
