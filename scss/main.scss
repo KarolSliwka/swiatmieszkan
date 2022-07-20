@@ -1,11 +1,14 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
-/* coloristic */
+/* BASE */
 @import "./colors";
 @import "components/icons/icons";
-/* base style */
 @import "base/base";
-/* header - navigation */
+/* NAVIGATION */
 @import "components/header/navbar";
-/* footer */
+/* PAGES */
+// -- Home
+@import "../home/static/scss/home";
+
+/* FOOTER */
 @import "components/footer/footer";
