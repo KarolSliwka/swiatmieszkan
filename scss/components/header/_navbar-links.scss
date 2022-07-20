@@ -1,17 +1,17 @@
 .nav-link {
-    color: $light-grey;
+    color: #929292;
     display: flex;
     align-items: center;
 
     &:hover {
-        color: $flat-blue;
+        color: $main;
     }
 }
 
 .add-new-listing {
     height: 34px;
     border-radius: 2rem;
-    background-color: $dark-blue;
+    background-color: $main-accent;
 
     a {
         color: $white;
@@ -21,10 +21,10 @@
         a {
             color: $white;
         }
-        background-color: $flat-blue;
+        background-color: $main;
     }
 }
 
 .selected-menu {
-    color: $flat-blue !important;
+    color: $main !important;
 }

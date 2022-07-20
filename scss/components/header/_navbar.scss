@@ -4,7 +4,7 @@ nav {
     font-size: 0.85rem;
     display: flex;
     align-items: center;
-    border-bottom: 4px solid $flat-blue;
+    border-bottom: 4px solid $main;
     background-color: $white !important;
     height: 66px;
 
@@ -62,10 +62,10 @@ nav {
                 text-decoration: none;
                 display: block;
                 padding: 8px 14px !important;
-                color: $light-grey;
+                color: #929292;
 
                 &:hover {
-                    color: $flat-blue;
+                    color: $main;
                 }
             }
         }
@@ -102,10 +102,10 @@ nav {
 
         a {
             text-decoration: none;
-            color: $light-grey;
+            color: #929292;
 
             &:hover {
-                color: $flat-blue;
+                color: $main;
             }
         }
     }

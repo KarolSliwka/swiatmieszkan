@@ -1,15 +1,16 @@
 footer {
-    font-family: "Lato", sans-serif;
-    background-color: $flat-blue;
+    background-color: $main;
     color: $white;
 
     p {
         color: $white;
         font-weight: 300;
+        font-size: 0.85rem;
     }
 
     ul {
         list-style: none;
+        align-items: center;
 
         .footer-link {
             font-weight: 300;
@@ -24,10 +25,6 @@ footer {
                 }
             }
         }
-    }
-
-    .copyrigts {
-        @extend p;
     }
 }
 
