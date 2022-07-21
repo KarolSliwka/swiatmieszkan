@@ -7,6 +7,9 @@ nav {
     border-bottom: 4px solid $main;
     background-color: $white !important;
     height: 66px;
+    -webkit-box-shadow: 0px 4px 10px -5px #ccc;
+    -moz-box-shadow: 0px 4px 10px -5px #ccc;
+    box-shadow: 0px 4px 10px -5px #ccc;
 
     .logo {
         height: 40px;
@@ -82,6 +85,7 @@ nav {
     transform-origin: top;
     list-style: none;
     width: 240px;
+    top: 62px;
     background-color: $white;
     border-radius: 0;
     border-bottom-left-radius: 0.5rem;
@@ -155,11 +159,6 @@ nav {
     &.expand {
         transform: scaleY(0);
     }
-}
-
-#submenu-tab,
-#submenu-mob {
-    top: 60px !important;
 }
 
 /* import navbar links style */

@@ -9,17 +9,25 @@ $(document).ready(function () {
    * This fucntion will apply class for hamburger button in each menu
    * when clicked on button
    */
-  $("#btn-ham-tab").click(function () {
+  const btnHamTab = $("#btn-ham-tab");
+  const btnHamMed = $("#btn-ham-med");
+  const btnHamMob = $("#btn-ham-mob");
+
+  const tabSubmenu = $("#submenu-tab");
+  const medSubmenu = $("#submenu-med");
+  const mobSubmenu = $("#submenu-mob");
+
+  btnHamTab.click(function () {
     $(this).toggleClass("open");
     $(this).parent().next("div").toggleClass("expand-menu");
   });
 
-  $("#btn-ham-med").click(function () {
+  btnHamMed.click(function () {
     $(this).toggleClass("open");
     $(this).parent().next("ul").toggleClass("expand-menu");
   });
 
-  $("#btn-ham-mob").click(function () {
+  btnHamMob.click(function () {
     $(this).toggleClass("open");
     $(this).parent().next("ul").toggleClass("expand-menu");
   });
@@ -28,7 +36,7 @@ $(document).ready(function () {
    * This function will apply class to rotate little chevron
    * when clicked on submenu link in doprdown menu
    */
-  $("#submenu-tab").click(function () {
+  tabSubmenu.click(function toggleTabSubmenu() {
     $(this).children("li").toggleClass("selected-menu");
     $(this).children("li").children("i").toggleClass("rotate");
     $(this)
@@ -39,25 +47,15 @@ $(document).ready(function () {
     $(this).children("li").next("#expand-menu").toggleClass("expand");
   });
 
-  $("#submenu-med").click(function () {
-    $(this).children("li").toggleClass("selected-menu");
-    $(this).children("li").children("i").toggleClass("rotate");
-    $(this)
-      .children("li")
-      .next("#expand-menu")
-      .children("li")
-      .toggleClass("d-none");
-    $(this).children("li").next("#expand-menu").toggleClass("expand");
+  medSubmenu.click(function toggleMedSubmenu() {
+    $(this).children("i").toggleClass("rotate");
+    $(this).next("#expand-menu").children("li").toggleClass("d-none");
+    $(this).next("#expand-menu").toggleClass("expand");
   });
 
-  $("#submenu-mob").click(function () {
-    $(this).children("li").toggleClass("selected-menu");
-    $(this).children("li").children("i").toggleClass("rotate");
-    $(this)
-      .children("li")
-      .next("#expand-menu")
-      .children("li")
-      .toggleClass("d-none");
-    $(this).children("li").next("#expand-menu").toggleClass("expand");
+  mobSubmenu.click(function toggleMobSubmenu() {
+    $(this).children("i").toggleClass("rotate");
+    $(this).next("#expand-menu").children("li").toggleClass("d-none");
+    $(this).next("#expand-menu").toggleClass("expand");
   });
 });
