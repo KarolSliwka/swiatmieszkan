@@ -7,22 +7,29 @@
 <!-- Hidden title -->
 <h1>Home page</h1>
 <!-- Search section -->
-<section class="sec-search">
-    <div class="container">
-        <h2 class=""></h2>
-        <div class="jumbotron">
-            <!-- Want to know more scroll button -->
-            <a class="btn btn-primary btn-lg" href="#" role="button">Dowiedz się więcej!</a>
-        </div>
+<section class="sec-search justify-content-center">
+    <img src="{{MEDIA_URL}}images/home/top-background.jpg" alt="">
+    <div class="white-box">
+        <h2>Wynajmij mieszkanie tam gdzie chcesz!</h2>
+        <p></p>
+        <form action="#" method="GET">
+            <div class="form-group">
+                <div class="input-group">
+                    <input name="" type="text" class="form-control search-field" placeholder="Miasto"
+                        aria-label="Wyszukaj Miasto" required>
+                    <button class="btn btn-search" type="submit">Szukaj</button>
+                </div>
+            </div>
+        </form>
     </div>
 </section>
 <!-- Counter section -->
 <section class="sec-counter">
     <!-- Number of listed/rented flats, tenats and landlords -->
-    <div class="container">
-        <h2 class="">Dziękujemy, że z nami jesteście! <i class="fas fa-heart"></i></h2>
-        <p>Zaufało nam już <span id="tenants-registered">23</span> wynajmujących, oraz
-            <span id="landlords-registered">10</span> najemców!
+    <div class="container d-flex align-items-center justify-content-between">
+        <h2 class="m-0">Dziękujemy, że jesteście z nami! <i class="fas fa-heart"></i></h2>
+        <p class="m-0">Zaufało nam już <span id="counter-tenants">23</span><span> wynajmujących</span>, oraz
+            <span id="counter-landlords">10</span><span> najemców!</span>
         </p>
     </div>
 </section>
@@ -37,12 +44,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl 6">
-                <a id="advert-1" href="http://" class="advert-link" rel="noreferer,noopener,nofollow" target="_blank">
+                <a href="http://" class="advert-link" rel="noreferer,noopener,nofollow" target="_blank">
                     <img src="" alt="">
                 </a>
             </div>
             <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl 6">
-                <a id="advert-2" href="http://" class="advert-link" rel="noreferer,noopener,nofollow" target="_blank">
+                <a href="http://" class="advert-link" rel="noreferer,noopener,nofollow" target="_blank">
                     <img src="" alt="">
                 </a>
             </div>
@@ -59,6 +66,33 @@
 <section class="sec-tenats">
     <div class="container">
 
+    </div>
+</section>
+<!-- Adviertisment section - logotypes -->
+<section class="adverts">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                <a href="#" class="advert-logo" rel="noreferer,noopener,nofollow" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                <a href="#" class="advert-logo" rel="noreferer,noopener,nofollow" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                <a href="#" class="advert-logo" rel="noreferer,noopener,nofollow" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                <a href="#" class="advert-logo" rel="noreferer,noopener,nofollow" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
