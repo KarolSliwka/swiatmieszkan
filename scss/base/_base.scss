@@ -6,7 +6,7 @@ body {
     min-width: 320px !important;
     background-color: $body;
     color: #929292;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif !important;
 }
 
 main > .container-fluid {
@@ -24,7 +24,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Montserrat", sans-serif;
     color: $titles;
 }
 
@@ -33,7 +32,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
 }
 h5 {
@@ -44,7 +43,6 @@ h5 {
 
 /* Paragraphs */
 p {
-    font-family: "Lato", sans-serif;
     font-size: 1rem;
     font-weight: 300;
     color: $paragraphs;
