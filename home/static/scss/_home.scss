@@ -1,9 +1,6 @@
 #home {
-    main {
-        section {
-            padding-top: 2rem !important;
-            padding-bottom: 2rem !important;
-        }
+    .text-break {
+        display: none;
     }
 
     .sec-search {
@@ -68,23 +65,48 @@
     }
 
     .sec-counter {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         background-color: $white;
 
-        p {
-            font-size: 1rem;
+        p,
+        span {
+            font-weight: 400;
+            font-size: 1.25rem !important;
+            font-family: "Montserrat", sans-serif;
         }
 
         i {
             color: $flat-red;
         }
+
         span {
-            font-size: 1.25rem;
-            font-weight: 400;
             color: $main;
         }
     }
 
+    .sec-last-listed {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .sec-information {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 300;
+        }
+    }
+
     // Small devices (landscape phones, 576px and up)
+    @media (max-width: 350px) {
+        .text-break {
+            display: block;
+        }
+    }
+
     @media (max-width: 576px) {
         .sec-search {
             .white-box {
