@@ -10,8 +10,8 @@
 <section class="sec-search justify-content-center">
     <img src="{{MEDIA_URL}}images/home/top-background.jpg" alt="">
     <div class="white-box">
-        <h2>Wynajmij mieszkanie tam gdzie chcesz..</h2>
-        <p class="">Wybierz miasto, mieszkanie i umów wizytę!</p>
+        <h2>Wynajmij mieszkanie tam gdzie chcesz!</h2>
+        <p class="">Wybierz miasto, mieszkanie i umów wizytę.</p>
         <p></p>
         <form action="#" method="GET">
             <div class="form-group">
@@ -28,8 +28,10 @@
 <section class="sec-counter">
     <!-- Number of listed/rented flats, tenats and landlords -->
     <div class="container d-flex align-items-center justify-content-between">
-        <h2 class="m-0">Dziękujemy, że jesteście z nami! <i class="fas fa-heart"></i></h2>
-        <p class="m-0">Zaufało nam już <span id="counter-tenants">23</span><span> wynajmujących</span>, oraz
+        <p class="m-0">Dziękujemy,<br class="text-break"> że jesteście z nami! <i class="fas fa-heart"></i></p>
+        <p class="m-0">Zaufało nam już <span id="counter-tenants"><br class="text-break">23</span><span>
+                wynajmujących</span>,
+            <br class="d-xs-block d-sm-none d-md-none d-lg-none d-xl-none d-xxl-none"> oraz
             <span id="counter-landlords">10</span><span> najemców!</span>
         </p>
     </div>
@@ -37,38 +39,64 @@
 <!-- Latest listed flats -->
 <section class="sec-last-listed">
     <div class="container">
+        <h3 class="text-center">Sprwadź ostatnio dodane oferty!</h3>
 
     </div>
 </section>
-<!-- Adviertisment section -->
-<section class="adverts">
+<hr class="container">
+<!-- Landlord & Tenants information -->
+<section class="sec-information">
     <div class="container">
+        <h3 class="text-center">Informacje dla Wynajmujących i Najemców</h3>
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl 6">
-                <a href="http://" class="advert-link" rel="noreferer,noopener,nofollow" target="_blank">
-                    <img src="" alt="">
-                </a>
+            <div id="landlords" class="col-12 mt-4">
+                <h4 class="text-start">Wynajmujący</h4>
+                <div class="row mt-3">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <p>Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Optio possimus, omnis
+                            temporibus doloribus reprehenderit labore autem a ipsam enim maiores unde sapiente fugit
+                            inventore eos ipsa odit sit, nobis quis?</p>
+                        <a href="{% url 'landlords' %}" class="btn btn-info">Dowiedz się więcej!</a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl 6">
-                <a href="http://" class="advert-link" rel="noreferer,noopener,nofollow" target="_blank">
-                    <img src="" alt="">
-                </a>
+            <div id="tenants" class="col-12 mt-4">
+                <h4 class="text-start">Najemcy</h4>
+                <div class="row mt-3">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 order-last">
+                        <p>Lorem ipsum dolor sit, amet
+                            consectetur adipisicing elit. Optio possimus, omnis
+                            temporibus doloribus reprehenderit labore autem a ipsam enim maiores unde sapiente fugit
+                            inventore eos ipsa odit sit, nobis quis?</p>
+                        <a href="{% url 'tenants' %}" class="btn btn-info">Dowiedz się więcej!</a>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 order-first">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Landlord information -->
-<section class="sec-landlords">
-    <div class="container">
-
-    </div>
-</section>
-<!-- Tenant information -->
-<section class="sec-tenats">
-    <div class="container">
-
-    </div>
-</section>
+<hr class="container">
 <!-- Adviertisment section - logotypes -->
 <section class="adverts">
     <div class="container">
