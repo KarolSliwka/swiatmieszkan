@@ -24,7 +24,8 @@ h3,
 h4,
 h5,
 h6 {
-    color: $titles;
+    color: $paragraphs;
+    font-weight: 400;
 }
 
 h1 {
@@ -32,9 +33,13 @@ h1 {
 }
 
 h2 {
-    font-size: 1.25rem;
-    font-weight: 400;
+    font-size: 1.5rem;
 }
+
+h3 {
+    font-size: 1.25rem;
+}
+
 h5 {
     font-size: 0.85rem;
     font-weight: 400;
@@ -62,4 +67,21 @@ input[type="number"]:focus,
 [type="tel"].form-control:focus,
 [contenteditable].form-control:focus {
     box-shadow: none;
+}
+
+hr {
+    padding: 0;
+    margin: 0;
+}
+
+.btn-info {
+    color: $paragraphs;
+    background-color: $body;
+    border: 1px solid #bbbbbb;
+
+    &:hover {
+        color: $white;
+        background-color: $main;
+        border-color: $main-accent;
+    }
 }
