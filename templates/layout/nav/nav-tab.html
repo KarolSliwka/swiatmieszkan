@@ -10,7 +10,7 @@
                     </i>Dodaj Mieszkanie</a>
             </li>
             <li class="nav-item me-4">
-                <a class="nav-link" href="#">Zaloguj<i class="far fa-user ms-2"></i>
+                <a class="nav-link" href="{% url 'account_login' %}">Zaloguj<i class="far fa-user ms-2"></i>
                 </a>
             </li>
             <button id="btn-ham-tab" class="navbar-toggler my-auto">
@@ -24,9 +24,12 @@
                     class="far fa-chevron-down ms-2"></i>
             </li>
             <ul id="expand-menu" class="expand mb-0">
-                <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">Wynajmujący</a></li>
-                <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">Najemca</a></li>
-                <li class="nav-item justify-content-end d-none"><a class="nav-link" href="#">O Platformie</a></li>
+                <li class="nav-item justify-content-end d-none"><a class="nav-link"
+                        href="{% url 'landlords' %}">Wynajmujący</a></li>
+                <li class="nav-item justify-content-end d-none"><a class="nav-link"
+                        href="{% url 'tenants' %}">Najemca</a></li>
+                <li class="nav-item justify-content-end d-none"><a class="nav-link" href="{% url 'about' %}">O
+                        Platformie</a></li>
             </ul>
         </div>
     </div>

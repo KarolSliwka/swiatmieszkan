@@ -10,15 +10,16 @@
                     </i>Dodaj Mieszkanie</a>
             </li>
             <li class="nav-item info-link special-height">
-                <a class="nav-link" href="#"></i>Informacje<i class="far fa-chevron-down ms-2"></i></a>
+                <a class="nav-link" href="{% url 'information' %}"></i>Informacje<i
+                        class="far fa-chevron-down ms-2"></i></a>
                 <ul class="sub-menu">
-                    <li class="nav-item"><a class="nav-link" href="#">Wynajmujący</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Najemca</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">O Platformie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'landlords' %}">Wynajmujący</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'tenants' %}">Najemca</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">O Platformie</a></li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link mx-2" href="#">Zaloguj<i class="far fa-user ms-2"></i>
+                <a class="nav-link mx-2" href="{% url 'account_login' %}">Zaloguj<i class="far fa-user ms-2"></i>
                 </a>
             </li>
         </ul>
